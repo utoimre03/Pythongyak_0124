@@ -24,5 +24,10 @@ def beolvas():
 def adatokSorai(lista):
     print(f"\nAz adatok sorainak száma: {len(lista)}", end="")
 
-def legrovidebb():
-    print(f"A legrövidebb film címe: {}")
+def legrovidebb(lista):
+    minIndex = 0
+    for index in range(0, len(lista), 1):
+        if lista[index].perc < lista[minIndex].perc:
+            minIndex += index
+    print(f"\nA legrövidebb film címe: {lista[minIndex].cim}")
+
